@@ -1,32 +1,45 @@
 {
-  "name": "baum/baum",
-  "type": "library",
-  "description": "Baum is an implementation of the Nested Set pattern for Eloquent models.",
-  "keywords": ["nested set", "laravel", "laravel 4", "laravel 5", "eloquent", "database"],
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Estanislau Trepat",
-      "email": "estanis@etrepat.com",
-      "homepage": "http://etrepat.com"
+    "name": "isildur/baum",
+    "description": "Nested Set Model for Laravel 5.7 and up",
+    "keywords": ["laravel", "nested sets", "nsm", "database", "hierarchy"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Mehdi Riyahimanesh",
+            "email": "riyahimanesh@gmail.com"
+        }
+    ],
+
+    "require": {
+        "php": ">=7.1.3",
+        "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "illuminate/database": "~5.7.0|~5.8.0|^6.0|^7.0",
+        "illuminate/events": "~5.7.0|~5.8.0|^6.0|^7.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Isildur\\Baum\\": "src/"
+        }
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "7.*"
+    },
+
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v5.0.x-dev"
+        },
+
+        "laravel": {
+            "providers": [
+                "Isildur\\Baum\\BaumServiceProvider"
+            ]
+        }
     }
-  ],
-  "require": {
-    "php": ">=5.4.0",
-    "illuminate/console": "5.*",
-    "illuminate/database": "5.*",
-    "illuminate/events": "5.*",
-    "illuminate/filesystem": "5.*",
-    "illuminate/support": "5.*"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.0",
-    "mockery/mockery": "~0.9",
-    "d11wtq/boris": "~1.0.10"
-  },
-  "autoload": {
-    "psr-0": {
-      "Baum": "src/"
-    }
-  }
 }
